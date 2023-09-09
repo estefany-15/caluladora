@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,21 +29,90 @@ public class calculadora_IU extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtnro1 = new javax.swing.JTextField();
+        txtnro2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        btnsumar = new javax.swing.JButton();
+        btnrestar = new javax.swing.JButton();
+        btnrestar1 = new javax.swing.JButton();
+        btnrestar2 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("nro1");
+
+        jLabel2.setText("nro2");
+
+        btnsumar.setText("sumar");
+        btnsumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsumarActionPerformed(evt);
+            }
+        });
+
+        btnrestar.setText("restar");
+
+        btnrestar1.setText("multiplicar");
+
+        btnrestar2.setText("dividir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2))
+                        .addGap(66, 66, 66)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtnro1)
+                            .addComponent(txtnro2, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnsumar)
+                        .addGap(34, 34, 34)
+                        .addComponent(btnrestar)
+                        .addGap(26, 26, 26)
+                        .addComponent(btnrestar1)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnrestar2)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtnro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtnro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnsumar)
+                    .addComponent(btnrestar)
+                    .addComponent(btnrestar1)
+                    .addComponent(btnrestar2))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsumarActionPerformed
+        // TODO add your handling code here:
+        double nro1=Double.parseDouble(txtnro1.getText());
+         double nro2=Double.parseDouble(txtnro2.getText());
+         double sumar=nro1+nro2;
+         JOptionPane.showMessageDialog(this,"la suma es :"+sumar);
+    }//GEN-LAST:event_btnsumarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +150,13 @@ public class calculadora_IU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnrestar;
+    private javax.swing.JButton btnrestar1;
+    private javax.swing.JButton btnrestar2;
+    private javax.swing.JButton btnsumar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField txtnro1;
+    private javax.swing.JTextField txtnro2;
     // End of variables declaration//GEN-END:variables
 }
