@@ -43,9 +43,9 @@
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="btnrestar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="btnrestar1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnmultiplicar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnrestar2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btndividir" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="50" max="32767" attributes="0"/>
@@ -69,8 +69,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnsumar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnrestar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnrestar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnrestar2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnmultiplicar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btndividir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="126" max="32767" attributes="0"/>
           </Group>
@@ -104,13 +104,16 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="restar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnrestarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnrestar1">
+    <Component class="javax.swing.JButton" name="btnmultiplicar">
       <Properties>
         <Property name="text" type="java.lang.String" value="multiplicar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnrestar2">
+    <Component class="javax.swing.JButton" name="btndividir">
       <Properties>
         <Property name="text" type="java.lang.String" value="dividir"/>
       </Properties>

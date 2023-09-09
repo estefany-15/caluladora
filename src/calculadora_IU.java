@@ -35,8 +35,8 @@ public class calculadora_IU extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnsumar = new javax.swing.JButton();
         btnrestar = new javax.swing.JButton();
-        btnrestar1 = new javax.swing.JButton();
-        btnrestar2 = new javax.swing.JButton();
+        btnmultiplicar = new javax.swing.JButton();
+        btndividir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,10 +52,15 @@ public class calculadora_IU extends javax.swing.JFrame {
         });
 
         btnrestar.setText("restar");
+        btnrestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnrestarActionPerformed(evt);
+            }
+        });
 
-        btnrestar1.setText("multiplicar");
+        btnmultiplicar.setText("multiplicar");
 
-        btnrestar2.setText("dividir");
+        btndividir.setText("dividir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,9 +83,9 @@ public class calculadora_IU extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addComponent(btnrestar)
                         .addGap(26, 26, 26)
-                        .addComponent(btnrestar1)
+                        .addComponent(btnmultiplicar)
                         .addGap(18, 18, 18)
-                        .addComponent(btnrestar2)))
+                        .addComponent(btndividir)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,8 +103,8 @@ public class calculadora_IU extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnsumar)
                     .addComponent(btnrestar)
-                    .addComponent(btnrestar1)
-                    .addComponent(btnrestar2))
+                    .addComponent(btnmultiplicar)
+                    .addComponent(btndividir))
                 .addContainerGap(126, Short.MAX_VALUE))
         );
 
@@ -113,6 +118,14 @@ public class calculadora_IU extends javax.swing.JFrame {
          double sumar=nro1+nro2;
          JOptionPane.showMessageDialog(this,"la suma es :"+sumar);
     }//GEN-LAST:event_btnsumarActionPerformed
+
+    private void btnrestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrestarActionPerformed
+        // TODO add your handling code here:
+         double nro1=Double.parseDouble(txtnro1.getText());
+         double nro2=Double.parseDouble(txtnro2.getText());
+         double restar=nro1-nro2;
+         JOptionPane.showMessageDialog(this,"la resta es:"+restar);
+    }//GEN-LAST:event_btnrestarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,9 +163,9 @@ public class calculadora_IU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btndividir;
+    private javax.swing.JButton btnmultiplicar;
     private javax.swing.JButton btnrestar;
-    private javax.swing.JButton btnrestar1;
-    private javax.swing.JButton btnrestar2;
     private javax.swing.JButton btnsumar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
